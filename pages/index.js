@@ -73,28 +73,31 @@ export default function Home() {
         </nav>
       </header>
       <main className='mt-28'>
-        {/* <Image className='h-auto' src={'/svg-export/svgexport-25.svg'} height={150} width={250} alt=""/> */}
-        <section>
-          <div className='flex flex-col items-center'>
+        <section className='flex flex-col lg:flex-row'>
+          <div className='flex flex-col items-center
+           max-w-md mx-auto sm:max-w-xl lg:items-start
+           lg:mx-10'>
             <div
               className='flex justify-around text-white
-            text-sm align-middle w-60 border rounded-3xl py-1
-            border-orangish '
+            text-sm items-center w-60 border rounded-3xl py-1
+            border-orangish'
             >
               <div className='border border-orangish rounded-3xl px-2 bg-orangish'>
                 <p>NEW</p>
               </div>
               <p>Business Plans are here! →</p>
             </div>
-            <div className='mt-2 text-center'>
-              <h1 className='mb-4 text-7xl font-bold text-whitish'>The Better Way to Meeting</h1>
+            <div className='mt-2 text-center lg:text-left'>
+              <h1 className='mb-4 text-7xl font-bold text-whitish'>
+                The Better Way to Meeting
+              </h1>
               <h2 className='mb-4 text-3xl text-grayish'>
                 Get your team on the same page inside online meeting rooms
                 with collaborative productivity tools.
               </h2>
             </div>
             <div className='w-full'>
-              <form className='max-w-xs mx-auto flex flex-col mt-4'>
+              <form className='max-w-xs mx-auto flex flex-col mt-4 lg:mx-0'>
                 <input
                   className='border-2 focus:outline-none focus:ring
                 focus:ring-activeblue text-lg p-3 rounded-md
@@ -102,6 +105,7 @@ export default function Home() {
                   type="text"
                   placeholder='Enter a name for your room'
                 />
+
                 <button className='bg-bluish text-white text-lg
                 font-semibold py-3 mt-2 rounded-md '
                   type='submit'
@@ -111,42 +115,98 @@ export default function Home() {
               </form>
             </div>
           </div>
-          <div className='mt-14'>
-            <Image className='w-auto' src={"/svg-export/plateau.svg"} height={200} width={120} alt="" />
+          <div className='hidden lg:inline-block px-10 py-5 flex-1 mx-auto'>
+            <div className='rounded-full h-full
+            relative flex justify-center'>
+              <div className='cursor-pointer self-center'>
+                <Image className='rounded-lg h-auto' src={"/svg-export/logo2.svg"} height={200} width={170} alt="" />
+              </div>
+              <div className='cursor-pointer absolute top-5 left-3 hover:scale-105 transition duration-300'>
+                <div className='relative'>
+                  <Image className='rounded-lg h-auto' src={"/svg-export/document-icon.svg"} height={200} width={170} alt="" />
+                </div>
+                <div className='absolute -right-40 -bottom-7 left-20 w-full drop-shadow-lg'>
+                  <div className='flex px-2 py-2 items-center rounded-full bg-pink-200'>
+                    <div className='rounded-full bg-white p-2'>
+                      <Image className='h-auto' src={'/svg-export/file-icon.svg'} height={20} width={20} alt='' />
+                    </div>
+                    <p className='px-2 text-pink-600 font-bold'>Document</p>
+                  </div>
+                </div>
+              </div>
+              <div className='cursor-pointer absolute -bottom-10  hover:scale-105 transition duration-300'>
+                <div className='relative'>
+                  <Image className='rounded-lg h-auto  border-2 border-white' src={"/svg-export/code-icon.svg"} height={200} width={170} alt="" />
+                </div>
+                <div className='absolute -right-40 -bottom-7 left-20 w-full drop-shadow-lg'>
+                  <div className='flex px-2 py-2 items-center rounded-full bg-green-200 w-28'>
+                    <div className='rounded-full bg-white p-2'>
+                      <Image className='h-auto' src={'/svg-export/tag.svg'} height={20} width={20} alt='' />
+                    </div>
+                    <p className='px-2 text-green-700 font-bold'>Code</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className='cursor-pointer absolute -top-10 right-32 hover:scale-105 transition duration-300'>
+                <div className='relative'>
+                  <Image className='rounded-lg h-auto' src={"/svg-export/video.svg"} height={200} width={170} alt="" />
+                  <div className='absolute top-20 -right-28'>
+                    <Image className='rounded-lg h-auto' src={"/svg-export/vidmale.svg"} height={200} width={170} alt="" />
+                  </div>
+                  <div className='absolute -bottom-24 right-0 drop-shadow-lg'>
+                    <div className='flex px-2 py-2 items-center rounded-full bg-blue-200'>
+                      <div className='rounded-full bg-white p-2'>
+                        <Image className='h-auto' src={'/svg-export/cam.svg'} height={20} width={20} alt='' />
+                      </div>
+                      <p className='px-2 text-bluish font-bold'>Video</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
+        <div className='mt-14 flex flex-col
+          max-w-lg mx-auto sm:max-w-sm md:max-w-xl'>
+          <Image className='w-auto' src={"/svg-export/plateau.svg"} height={200} width={120} alt="" />
+        </div>
         <section id='features' className='pt-24 flex flex-col bg-white items-center'>
-          <div className='flex px-2 py-2 items-center rounded-full bg-yellowish'>
-            <div className='rounded-full bg-white p-2'>
-              <Image className='h-auto' src={'/svg-export/edit-icon.svg'} height={20} width={20} alt='' />
-            </div>
-            <p className='px-2 text-orange-600 font-bold'>Whiteboard</p>
-          </div>
-          <div className='mt-4 text-center text-5xl font-extrabold'>
-            <h1>Scribble, <span className='block'>Sketch, Draw</span>  & Diagram </h1>
-          </div>
-          <div className='mt-4 text-center text-xl text-blacklike'>
-            <div>
-              Lay out your plans, brainstorm
-              <span className='block'>some ideas, or annotate an</span>
-              <span className='block'>imported document or </span>
-              screenshot.
-            </div>
-            <div className='mt-4 uppercase text-sm font-semibold text-orangish'>
-              <div className='flex flex-row items-center'>
-                <Image className='h-auto' src={'/svg-export/multidirection.svg'} height={20} width={17} alt='' />
-                <p className='px-3 py-2'>Infinite, Multi-Directional Canvas </p>
+          <div className='flex flex-col items-center'>
+            <div className='flex px-2 py-2 items-center rounded-full bg-yellowish'>
+              <div className='rounded-full bg-white p-2'>
+                <Image className='h-auto' src={'/svg-export/edit-icon.svg'} height={20} width={20} alt='' />
               </div>
-              <div className='pl-6 flex flex-row'>
-                <Image className='h-auto' src={'/svg-export/adobe.svg'} height={10} width={15} alt='' />
-                <p className='px-3'>Import PDFs and Other Docs</p>
+              <p className='px-2 text-orange-600 font-bold'>Whiteboard</p>
+            </div>
+            <div className='mt-4 text-center text-5xl font-extrabold'>
+              <h1>Scribble, <span className='block'>Sketch, Draw</span>  & Diagram </h1>
+            </div>
+            <div className='mt-4 text-center text-xl text-blacklike'>
+              <div>
+                Lay out your plans, brainstorm
+                <span className='block'>some ideas, or annotate an</span>
+                <span className='block'>imported document or </span>
+                screenshot.
               </div>
-              <div className='flex flex-row'>
-                <Image className='h-auto' src={'/svg-export/camera.svg'} height={20} width={15} alt='' />
-                <p className='px-3 py-2'>Screenshot and Upload Your Video Feed </p>
+              <div className='mt-4 uppercase text-sm font-semibold
+             text-orangish flex flex-col items-center'>
+                <div className='flex flex-row items-center'>
+                  <Image className='h-auto' src={'/svg-export/multidirection.svg'} height={20} width={17} alt='' />
+                  <p className='px-3 py-2'>Infinite, Multi-Directional Canvas </p>
+                </div>
+                <div className='pl-6 flex flex-row'>
+                  <Image className='h-auto' src={'/svg-export/adobe.svg'} height={10} width={15} alt='' />
+                  <p className='px-3'>Import PDFs and Other Docs</p>
+                </div>
+                <div className='flex flex-row justify-center'>
+                  <Image className='h-auto' src={'/svg-export/camera.svg'} height={20} width={15} alt='' />
+                  <p className='px-3 py-2'>Screenshot and Upload Your Video Feed </p>
+                </div>
               </div>
             </div>
           </div>
+
         </section>
       </main>
     </div>

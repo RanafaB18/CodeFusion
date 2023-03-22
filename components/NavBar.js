@@ -9,9 +9,9 @@ const NavBar = () => {
                 lg:bg-blackish lg:align-middle'
         >
             <Link className='nav-link' href={"#features"}>Features</Link>
-            <Link className='nav-link' href={"/"}>Pricing</Link>
-            <Link className='nav-link' href={"/"}>FAQ</Link>
-            <Link className='nav-link' href={"/"}>Contact</Link>
+            {/* <Link className='nav-link' href={"/"}>Pricing</Link>
+            <Link className='nav-link' href={"/"}>FAQ</Link> */}
+            <Link className='nav-link' href={"/contact"}>Contact</Link>
             <Link className='nav-link' href={"/"}>Login</Link>
             <Link href={"/"}
                 className='nav-link bg-whitelike text-blacklike rounded-md
