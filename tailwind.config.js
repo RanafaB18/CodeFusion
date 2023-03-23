@@ -19,6 +19,10 @@ module.exports = {
         'grayish': '#A1AEBE',
         'bluish': '#4299e1',
         'yellowish': '#FEECC8',
+        'buttonBlue': '#59adeb',
+        'colorFrom': '#ff7a1b',
+        'colorTo': '#de3fe3',
+        'colorVia': '#22dcbd'
       }
     },
   },

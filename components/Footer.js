@@ -1,0 +1,45 @@
+import Link from "next/link"
+import Image from "next/image"
+
+const Footer = () => {
+    return (
+        <footer className="mt-auto">
+            <div className="pt-32 pb-10">
+                <hr />
+                <div className="py-20">
+                    <div className="text-center max-w-sm mx-auto sm:max-w-none">
+                        <h2 className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-colorFrom via-colorVia to-colorTo">Communication + Collaboration = Awesome</h2>
+                        <p className="text-3xl mt-3">Start working together better - remotely</p>
+                        <button className="mt-8 rounded px-10 py-3 text-lg font-semibold bg-buttonBlue text-white">Try Room For Free</button>
+                    </div>
+                </div>
+            </div>
+            <div className="bg-blackish flex flex-col relative">
+                <div className="absolute self-center -top-7 ">
+                    <div className=" bg-blackish rounded-full p-3">
+
+                        <Image className="h-auto" src={"/svg-export/logo2.svg"} height={30} width={35} alt="" />
+                    </div>
+                </div>
+
+                <div className="py-16 flex flex-col md:flex-row md:justify-evenly md:items-stretch">
+                    <div className="mt-12 flex flex-col items-center">
+                        <p className="text-white pb-3 font-semibold uppercase">General</p>
+                        <Link className="nav-link w-full text-center text-gray-400" href='/'>Home</Link>
+                        <Link className="nav-link w-full text-center text-gray-400" href='/contact'>Contact</Link>
+                    </div>
+                    <div className="mt-12 flex flex-col items-center">
+                        <p className="text-white pb-3 font-semibold uppercase">Product</p>
+                        <Link className="nav-link w-full text-center text-gray-400" href='/'>Features</Link>
+                    </div>
+                    <div className="mt-12 flex flex-col items-center">
+                        <p className="text-white pb-3 font-semibold uppercase">Legal</p>
+                        <Link className="nav-link w-full text-center text-gray-400" href='/'>Terms of Use</Link>
+                        <Link className="nav-link w-full text-center text-gray-400" href='/'>Privacy Policy</Link>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    )
+}
+export default Footer

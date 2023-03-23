@@ -3,12 +3,12 @@ import Link from "next/link"
 const NavBar = () => {
     return (
         <div
-            className='absolute text-whitish bg-blacklike
+            className='absolute z-20 text-whitish bg-blacklike
                 flex flex-col py-2 right-0 w-60 font-semibold
                 text-md rounded-md lg:flex-row lg:relative lg:w-full
                 lg:bg-blackish lg:align-middle'
         >
-            <Link className='nav-link' href={"#features"}>Features</Link>
+            <Link className='nav-link' href={"/#features"}>Features</Link>
             {/* <Link className='nav-link' href={"/"}>Pricing</Link>
             <Link className='nav-link' href={"/"}>FAQ</Link> */}
             <Link className='nav-link' href={"/contact"}>Contact</Link>
